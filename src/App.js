@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import api from './api';
+import Header from './header';
+import { Container, Table, TableRow, TableCell } from '@material-ui/core';
+import './style.css';
 
 function App() {
 
@@ -14,17 +17,22 @@ function App() {
     
 
     return (
-        <table>
-            {lista.map(item => (
-                <tr key={item.id}>
-                    <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>
-                        <input type="checkbox" checked={item.done}/>
-                    </td>
-                </tr>
-            ))}
-        </table>
+        <>
+        <Header />
+        <Container maxWidth="lg" className="container"> 
+            <Table>
+                {lista.map(item => (
+                    <TableRow key={item.id}>
+                        <TableCell>{item.id}</TableCell>
+                        <TableCell>{item.name}</TableCell>
+                        <TableCell>
+                            <input type="checkbox" checked={item.done}/>
+                        </TableCell>
+                    </TableRow>
+                ))}
+            </Table>
+        </Container>
+        </>
     );
 }
 
