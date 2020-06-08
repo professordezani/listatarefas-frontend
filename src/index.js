@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import orange from '@material-ui/core/colors/orange';
-import amber from '@material-ui/core/colors/amber';
+import red from '@material-ui/core/colors/red';
+// import amber from '@material-ui/core/colors/amber';
 
 const theme = createMuiTheme({
   palette: {
-    primary: orange,
-    secondary: amber,
+    primary: red,
+    // secondary: amber,
   },  
 });
 
